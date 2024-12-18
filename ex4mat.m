@@ -1,0 +1,10 @@
+ts=0.01;
+t=[-5:ts:5]';
+x=zeros(size(t));
+x(101:501)=4*sin(0.5*pi*t(101:501));
+x(501:701)=2*sin(0.25*pi*t(501:701));
+x(701:901)=2;
+x(901:1001)=2*exp(-1*(t(901:1001)-4));
+plot(t,x); axis([-5 5 -5 5]);
+grid; title('Mixed signal of sinusoids and exponential');
+xlabel('time(sec)'); ylabel('Amplitude');

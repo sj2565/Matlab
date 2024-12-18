@@ -1,0 +1,16 @@
+t=1:0.01:3;
+f=3*exp(-i*(2*pi*t+pi/4));
+figure(1);
+subplot(2,2,1); plot(t, real(f));
+title('Real part of f(t)');
+xlabel('time(sec)'); ylabel('Re f(t)');
+subplot(2,2,2); plot(t, imag(f));
+title('Imaginary part of f(t)');
+xlabel('time(sec)'); ylabel('Im f(t)');
+%figure(2);
+subplot(2,2,3); plot(t, abs(f));
+title('Magnitude part of f(t)');
+xlabel('time(sec)'); ylabel('lf(t)l');
+subplot(2,2,4); plot(t, angle(f));
+title('Phase part of f(t)');
+xlabel('time(sec)'); ylabel('<f(t)');

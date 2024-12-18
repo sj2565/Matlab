@@ -1,0 +1,10 @@
+ts=0.1;
+t=[-5:ts:5]';
+x=zeros(size(t));
+x(31:40)=2*ones(1,10);
+x(41:61)=2-2*cos(0.5*pi*t(41:61));
+x(62:71)=2*ones(1,10);
+x(72:91)=4-t(72:91);
+plot(t,x); axis([-5 5 -2 4]);
+grid;
+xlabel('time(sec)'); ylabel('Amplitude'); 
